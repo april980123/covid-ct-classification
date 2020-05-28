@@ -1,3 +1,4 @@
+% Renee is here ha
 %%
 covid1 = imread('CT_COVID/2020.03.22.20040782-p25-1542.png');
 size(covid1)
