@@ -27,7 +27,37 @@ numel(net.Layers(end).ClassNames)
 [trainingSet, testSet] = splitEachLabel(imds, 0.3, 'randomize');
 
 
+%% to zoom in the test images
+% for i = 1:488
+%     
+%     Img=imread(char(testSet.Files(i)));
+%     % loads image
+%     Limits=size(Img);
+%     % gets image size
+%     Fig=figure;
+%     A=imshow(Img,'Border','tight');
+%     % plots image
+%     Pos=get(Fig,'Position');
+%     % gets figure size
+%     zoom(max(xlim)/Pos(1,3));
+%     % scales image to 100%
+%     saveas(Fig,char(testSet.Files(i)))
+% end
 
+
+%% to reverse black and white pixels in test images
+
+    
+% for i = 1:488
+%     Img=imread(char(testSet.Files(i)));
+%     if size(Img,3) == 3
+%         Img = rgb2gray(Img);
+%     end
+%     A = uint8(255) - Img;
+%     imwrite(A, char(testSet.Files(i)))
+% end
+
+%%
 
 imageSize = net.Layers(1).InputSize;
 
